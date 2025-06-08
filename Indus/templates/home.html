@@ -1,0 +1,499 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+  <div class="hero" >
+        <div class="hero-content">
+            <h1><span style='color:white;'>We Provide</span> <span class="highlight">Reliable</span> <span class="highlight">Industry</span> <span style='color:white;'>Solution</span></h1>
+            <p>Delivering reliable industrial automation solutions tailored to enhance performance, reduce downtime, and ensure long-term operational success.</p>
+            <div class="buttons">
+                <a href="{% url 'service' %}" class="btn discover">Get Services</a>
+                <a href="{% url 'contact_us'%}" class="btn contact">CONTACT US</a>
+            </div>
+        </div>
+    </div>
+
+ 
+      <!-- start: Feature Section -->
+      <section class="tj-feature-section section-space" id="scroll-hero">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="sec-heading text-center">
+                     {% comment %} <span class="sub-title wow fadeInUp" data-wow-delay="0.1s">Number #1 Solver</span> {% endcomment %}
+                     <h2 class="sec-title text-anim">What We Provide</h2>
+                     <div class="desc wow fadeInUp" data-wow-delay="0.3s">
+                        <p>We provide innovative industrial automation solutions, including design, integration, programming, and system maintenance services.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+{% comment %} add new {% endcomment %}
+             <div class="row">
+               <div class="col-12">
+                  <div class="swiper swiper-container tj-service-slider wow fadeInUp" data-wow-delay="0.5s">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                           <div class="service-style-2">
+                              <div class="service-icon">
+                                 <i class="tji-optimization"></i>
+                              </div>
+                              <div class="service-content">
+                                 {% comment %} <span class="number">01</span> {% endcomment %}
+                                 <h4 class="title"><a href="service-details.html">Industrial Automation Systems <br> </a>
+                                 </h4>
+                                 <div class="desc">
+                                    <p>Customized PLC, HMI, and SCADA systems for seamless process control and monitoring.</p>
+                                 </div>
+                                 {% comment %} <a class="service-button text-btn" href="service-details.html">
+                                    Get optimization <i class="tji-arrow-right"></i>
+                                 </a> {% endcomment %}
+                              </div>
+                              <div class="thumb">
+                                 <img src="/static/assets/images/inner_b11.jpg" alt="image">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="service-style-2">
+                              <div class="service-icon">
+                                 <i class="tji-strategic"></i>
+                              </div>
+                              <div class="service-content">
+                                 {% comment %} <span class="number">02</span> {% endcomment %}
+                                 <h4 class="title"><a href="service-details.html">Robotics & Motion Control & <br>
+                                       </a></h4>
+                                 <div class="desc">
+                                    <p>High-performance robotic solutions for assembly, packaging, and precision handling.</p>
+                                 </div>
+                                 {% comment %} <a class="service-button text-btn" href="service-details.html">
+                                    Get planning <i class="tji-arrow-right"></i>
+                                 </a> {% endcomment %}
+                              </div>
+                              <div class="thumb">
+                                 <img src="/static/assets/images/protfolio-lg-img01.png" alt="image">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="service-style-2">
+                              <div class="service-icon">
+                                 <i class="tji-leadership"></i>
+                              </div>
+                              <div class="service-content">
+                                 {% comment %} <span class="number">03</span> {% endcomment %}
+                                 <h4 class="title"><a href="service-details.html">Experience on Real Projects <br></a>
+                                 </h4>
+                                 <div class="desc">
+                                    <p>"Industrial automation projects with PLC, SCADA, robotics, and control."</p>
+                                 </div>
+                                 {% comment %} <a class="service-button text-btn" href="service-details.html">
+                                    Get coaching <i class="tji-arrow-right"></i>
+                                 </a> {% endcomment %}
+                              </div>
+                              <div class="thumb">
+                                 <img src="/static/assets/images/services-1.png" alt="image">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="service-style-2">
+                              <div class="service-icon">
+                                 <i class="tji-leadership"></i>
+                              </div>
+                              <div class="service-content">
+                                 {% comment %} <span class="number">03</span> {% endcomment %}
+                                 <h4 class="title"><a href="service-details.html">End-to-End Automation Services<br></a>
+                                 </h4>
+                                 <div class="desc">
+                                    <p>Complete automation solutions from design to deployment for industries.</p>
+                                 </div>
+                                 {% comment %} <a class="service-button text-btn" href="service-details.html">
+                                    Get coaching <i class="tji-arrow-right"></i>
+                                 </a> {% endcomment %}
+                              </div>
+                              <div class="thumb">
+                                 <img src="/static/assets/images/services-2.png" alt="image">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper_pagination service-pagination"></div>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </section>
+      <!-- end: Feature Section -->
+
+
+
+
+
+
+ <!-- start: Project Section -->
+      <section class="project-section-three section-space" data-bg-image="assets/images/shapes/h3-project.png">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="sec-heading style-2 text-center">
+                     {% comment %} <span class="sub-title wow fadeInUp" data-wow-delay="0.1s">Our case study</span> {% endcomment %}
+                     <h2 class="sec-title text-anim">Projects</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-12">
+                  <div class="project-wrapper-two wow fadeInUp" data-wow-delay="0.3s">
+                     <div class="project-style-3">
+                        <div class="project-thumb">
+                           <div class="image">
+                              <img src="/static/assets/images/iStock-1738603175.png" alt="Images">
+                           </div>
+                           <div class="project-default-content">
+                              <span><i class="tji-arrow-right"></i></span>
+                              <h3 class="title">Innovate consultancy</h3>
+                           </div>
+                        </div>
+                        <div class="project-content-box">
+                           {% comment %} <div class="project-tags">
+                              <ul>
+                                 <li><a href="project.html">Strategy</a></li>
+                                 <li><a href="project.html">Growth</a></li>
+                              </ul>
+                           </div> {% endcomment %}
+                           <div class="project-text">
+                              <h3 class="title"><a href="project-details.html">Battery Cell Manufacturing</a></h3>
+                              <div class="desc">
+                                 <p>Automated solutions for battery cell manufacturing, ensuring precision, scalability, efficiency, and quality in production processes.</p>
+                              </div>
+                              
+                           </div>
+                        </div>
+                     </div>
+                    
+                     <div class="project-style-3 active">
+                        <div class="project-thumb">
+                           <div class="image">
+                              <img src="/static/assets/images/OIP (15).jpeg" alt="Images">
+                           </div>
+                           <div class="project-default-content">
+                              <span><i class="tji-arrow-right"></i></span>
+                              <h3 class="title">Prime strategy</h3>
+                           </div>
+                        </div>
+                        <div class="project-content-box">
+                           
+                           <div class="project-text">
+                              <h3 class="title"><a href="project-details.html">Robotics Interface assignments</a></h3>
+                              <div class="desc">
+                                 <p>Developing and integrating robotics interfaces for efficient, precise, and intelligent automation across industrial applications.</p>
+                              </div>
+                              
+                           </div>
+                        </div>
+                     </div> 
+
+                     <div class="project-style-3">
+                        <div class="project-thumb">
+                           <div class="image">
+                              <img src="/static/assets/images/kuka_kr_agilus_dannoritzer.png" alt="Images">
+                           </div>
+                           <div class="project-default-content">
+                              <span><i class="tji-arrow-right"></i></span>
+                              <h3 class="title">Elevate enterprise</h3>
+                           </div>
+                        </div>
+                        <div class="project-content-box">
+                           
+                           <div class="project-text">
+                              <h3 class="title"><a href="project-details.html">CNC Application</a></h3>
+                              <div class="desc">
+                                 <p>Advanced CNC applications for automated precision machining, enhancing manufacturing accuracy, speed, and production efficiency.</p>
+                              </div>
+                              
+                           </div>
+                        </div>
+                     </div>
+                      <div class="project-style-3">
+                        <div class="project-thumb">
+                           <div class="image">
+                              <img src="/static/assets/images/arf_12.png" alt="Images">
+                           </div>
+                           <div class="project-default-content">
+                              <span><i class="tji-arrow-right"></i></span>
+                              <h3 class="title">Business growth</h3>
+                           </div>
+                        </div>
+                        <div class="project-content-box">
+                           
+                           <div class="project-text">
+                              <h3 class="title"><a href="project-details.html">Assembly line integration</a></h3>
+                              <div class="desc">
+                                 <p>Seamless assembly line integration using automation to boost productivity, accuracy, and operational efficiency in manufacturing.</p>
+                              </div>
+                             
+                           </div>
+                        </div>
+                     </div>
+                     <div class="project-style-3">
+                        <div class="project-thumb">
+                           <div class="image">
+                              <img src="/static/assets/images/Ekran.png" alt="Images">
+                           </div>
+                           <div class="project-default-content">
+                              <span><i class="tji-arrow-right"></i></span>
+                              <h3 class="title">Start edge solutions</h3>
+                           </div>
+                        </div>
+                        <div class="project-content-box">
+                           
+                           <div class="project-text">
+                              <h3 class="title"><a href="project-details.html">IoT-Based Machine Health Monitoring</a></h3>
+                              <div class="desc">
+                                 <p>An IoT-enabled system that monitors machine performance in real time, detecting faults and predicting maintenance to reduce downtime.</p>
+                              </div>
+                              
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end: Project Section -->
+
+
+
+          <!-- start: Brand Section -->
+<section class="tj-brand-section-three section-bottom-space">
+   <div class="container">
+      <div class="row">
+         <div class="sec-heading text-center">
+            <h2 class="sec-title text-anim">CLIENTS</h2>
+         </div>
+
+         <div class="col-12">
+            <div class="tj-brand-slider wow fadeInUp" data-wow-delay="0.1s">
+               <div class="swiper brand-slider-2 swiper-container">
+                  <div class="swiper-wrapper brand_wrapper">
+
+                     <div class="swiper-slide">
+                        <div class="brand-logo" style="display: flex; align-items: center; justify-content: center; height: 120px; padding: 10px;">
+                           <img src="/static/assets/images/renault white_JPG.png" alt="Brand" style="height: 100px; width: 150px; object-fit: contain;">
+                        </div>
+                     </div>
+
+                     <div class="swiper-slide">
+                        <div class="brand-logo" style="display: flex; align-items: center; justify-content: center; height: 120px; padding: 10px;">
+                           <img src="/static/assets/images/Mercedes-Benz.png" alt="Brand" style="height: 100px; width: 150px; object-fit: contain;">
+                        </div>
+                     </div>
+
+                     <div class="swiper-slide">
+                        <div class="brand-logo" style="display: flex; align-items: center; justify-content: center; height: 120px; padding: 10px;">
+                           <img src="/static/assets/images/JAGUAR.png" alt="Brand" style="height: 100px; width: 150px; object-fit: contain;">
+                        </div>
+                     </div>
+
+                     <div class="swiper-slide">
+                        <div class="brand-logo" style="display: flex; align-items: center; justify-content: center; height: 120px; padding: 10px;">
+                           <img src="/static/assets/images/MAG.png" alt="Brand" style="height: 100px; width: 150px; object-fit: contain;">
+                        </div>
+                     </div>
+
+                     <div class="swiper-slide">
+                        <div class="brand-logo" style="display: flex; align-items: center; justify-content: center; height: 120px; padding: 10px;">
+                           <img src="/static/assets/images/tksewhite_JPG.png" alt="Brand" style="height: 100px; width: 150px; object-fit: contain;">
+                        </div>
+                     </div>
+
+                     <div class="swiper-slide">
+                        <div class="brand-logo" style="display: flex; align-items: center; justify-content: center; height: 120px; padding: 10px;">
+                           <img src="/static/assets/images/BMW.png" alt="Brand" style="height: 100px; width: 150px; object-fit: contain;">
+                        </div>
+                     </div>
+
+                     <div class="swiper-slide">
+                        <div class="brand-logo" style="display: flex; align-items: center; justify-content: center; height: 120px; padding: 10px;">
+                           <img src="/static/assets/images/GM blue_JPG.png" alt="Brand" style="height: 100px; width: 150px; object-fit: contain;">
+                        </div>
+                     </div>
+
+                     <div class="swiper-slide">
+                        <div class="brand-logo" style="display: flex; align-items: center; justify-content: center; height: 120px; padding: 10px;">
+                           <img src="/static/assets/images/kukawhite_JPG.png" alt="Brand" style="height: 100px; width: 150px; object-fit: contain;">
+                        </div>
+                     </div>
+
+                     <div class="swiper-slide">
+                        <div class="brand-logo" style="display: flex; align-items: center; justify-content: center; height: 120px; padding: 10px;">
+                           <img src="/static/assets/images/logos-02-free-img-150x150.png" alt="Brand" style="height: 100px; width: 150px; object-fit: contain;">
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- end: Brand Section -->
+
+
+      
+
+
+      
+
+      <!-- start: Blog Section -->
+      <section class="tj-blog-section">
+         <div class="container">
+            <h2 class="sec-titl text-anim" style='text-align:center;'>Our Industrial Solution</h2>
+            <br>
+         
+            <div class="row">
+               <div class="col-12">
+                  <div class="blog-wrapper">
+                     <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="blog-images">
+                           
+                              <img src="/static/assets/images/OIP (16).jpeg" alt="Images">
+                           
+                        </div>
+                        <div class="blog-content">
+                          
+                           <h4 class="blog-title">
+                             Innovative Solutions for Industrial Efficiency
+                           </h4>
+                           <div class="desc">
+                          We deliver cutting-edge automation solutions that optimize industrial processes, reduce downtime, and enhance productivity. From smart control systems to robotics integration, our technologies drive efficiency, accuracy, and scalability across diverse manufacturing and production environments.
+                           </div>
+                           
+                          
+                        </div>
+                     </div>
+                     <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="blog-images">
+                              <img src="/static/assets/images/factory-worker-setting-up-the-robot-machine-e1651128282916 (1).webp" alt="Images">
+                         
+                        </div>
+                        <div class="blog-content">
+                           
+                           <div class="blog-titl">
+                              <h4>Process Optimization:</h4><small>Streamlining workflows to minimize waste, improve cycle times, and enhance overall production efficiency.</small>
+                           </div>
+                          
+                           
+                        </div>
+                     </div>
+                     <div class="blog-item wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="blog-images hover:shine">
+                              <img src="/static/assets/images/industries-industrial-automation-hero-GettyImages-1352825077-2 copy.webp" alt="Images">
+                        </div>
+                        <div class="blog-content">
+                           
+                           <h4 class="blog-titl"> Smart Automation Systems: </h4><small>Deploying PLC, SCADA, and IoT-based solutions for intelligent control, monitoring, and data-driven decisions.</small>
+                           
+                        </div>
+                     </div>
+                     <div class="blog-item wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="blog-images hover:shine">
+                              <img src="/static/assets/images/Industrial-Automation-1.webp" alt="Images">
+                           </a>
+                        </div>
+                        <div class="blog-content">
+                           
+                           <h4 class="blog-titl"> Predictive Maintenance: </h4><small>Implementing sensors and analytics to detect potential failures and schedule maintenance before downtime occurs.
+
+                           </small>
+                           
+                           
+                        </div>
+                     </div>
+                  </div>
+                  <div class="blog-button d-lg-none text-center wow fadeInUp" data-wow-delay="0.9s">
+                     <a href="blog.html" class="tj-primary-btn">
+                        <div class="btn_inner">
+                           <div class="btn_icon">
+                              <span>
+                                 <i class="tji-arrow-right"></i>
+                                 <i class="tji-arrow-right"></i>
+                              </span>
+                           </div>
+                           <div class="btn_text">
+                              <span>Explore more</span>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end: Blog Section -->
+
+
+
+<!-- start: Service Section -->
+<section class="tj-service-section">
+   <h2 class="sec-title text-ani" style="text-align:center;">Our Most Popular Courses</h2>
+
+   <div class="container">
+      <div class="row">
+         <div class="col-12">
+            <div class="service-wrapper">
+
+               {% for i in Service %}
+               <div class="service-item service-stack">
+                  <div class="service-content">
+                     <div class="service-text">
+                        <div class="service-icon">
+                           <span style='color:orange; font-size: 20px;'>Price: ₹{{ i.price }}</span>
+                        </div>
+                        <h3 class="title">
+                           <a href="{% url 'service_detail' i.slug %}">{{ i.heading }}</a>
+                        </h3>
+                        <div class="desc">
+                           <p>{{ i.content|truncatechars:120|safe }}</p>
+                        </div>
+
+                        <a href="{% url 'service_detail' i.slug %}" class="tj-primary-btn service-btn">
+                           <div class="btn_inner">
+                              <div class="btn_icon">
+                                 <span>
+                                    <i class="tji-arrow-right"></i>
+                                    <i class="tji-arrow-right"></i>
+                                 </span>
+                              </div>
+                              <div class="btn_text">
+                                 <span>Get started</span>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="service-images hover:shine">
+                     {% if i.image %}
+                     <img src="{{ i.image.url }}" alt="{{ i.heading }}">
+                     {% else %}
+                     <img src="{% static 'assets/images/placeholder.jpg' %}" alt="Service Image">
+                     {% endif %}
+                  </div>
+               </div>
+               {% endfor %}
+
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+  
+
+
+{% endblock %}

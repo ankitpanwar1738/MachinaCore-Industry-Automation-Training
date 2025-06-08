@@ -1,0 +1,229 @@
+{% extends 'base.html'%}
+
+{% load static %} 
+
+{% block body %}
+
+<!-- start: Cta Section -->
+      <section class="tj-page-header" data-bg-image="assets/images/bg/pheader-bg.webp">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="tj-page-header-content text-center">
+                     <h1 class="tj-page-title text-anim">Blog with sidebar</h1>
+                     <div class="tj-page-link wow fadeInUp" data-wow-delay="0.1s">
+                        <span>
+                           <a href="index.html">
+                              <span>Home</span>
+                           </a>
+                        </span>
+                        <span>/</span>
+                        <span>
+                           <span>Blog with sidebar</span>
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end: Cta Section -->
+      <!-- start: Blog Section -->
+      <section class="tj-post-area section-space">
+         <div class="container">
+            <div class="row rg-50">
+               <div class="col-lg-8">
+               {% for i in Blog %}
+                  <div class="row rg-30 justify-content-center">
+                     <div class="col-md-6">
+                        <div class="blog-style-2 wow fadeInUp" data-wow-delay="0.1s">
+                           <div class="blog-images">
+                              <img src="{{i.image}}" alt="Images">
+                              <div class="blog-date">
+                                 <span class="date">{{i.created_at}}</span>
+                                 {% comment %} <span class="month">Jul</span> {% endcomment %}
+                              </div>
+                           </div>
+                           <div class="blog-content">
+                              <div class="blog-two-meta">
+                                 <ul>
+                                    <li><a class="meta-link" href="blog-details.html">Business</a></li>
+                                    <li>03 Comments</li>
+                                 </ul>
+                              </div>
+                              <h4 class="title under-line"><a href="/blog_detail/{{i.slug}}">{{i.title}}</a>
+                              </h4>
+                              <div class="desc">
+                                 <p>{{i.content| truncatechars:80 }}
+                                 </p>
+                              </div>
+                              <div class="blog-button">
+                                 <a class="blog-btn text-btn" href="/blog_detail/{{i.slug}}">
+                                    Read more <i class="tji-arrow-right"></i>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               {% endfor %}
+                  <!-- post pagination -->
+                  <div class="tj-pagination">
+                     <ul>
+                        <li>
+                           <span aria-current="page" class="page-numbers current">01</span>
+                        </li>
+                        <li>
+                           <a class="page-numbers" href="#">02</a>
+                        </li>
+                        <li>
+                           <a class="next page-numbers" href="#"><i class="tji-arrow-right"></i></a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <aside class="tj-post-sidebar">
+                     <!-- search -->
+                     <div class="tj-sidebar-widget wow fadeInUp" data-wow-delay="0.1s">
+                        <h5 class="tj-sidebar-widget-title">Search here</h5>
+                        <div class="tj-widget__search sidebar-search">
+                           <form action="#" method="get">
+                              <input type="search" value="" required="" name="s" placeholder="Search...">
+                              <button type="submit"> <i class="fa-regular fa-magnifying-glass"></i> </button>
+                           </form>
+                        </div>
+                     </div>
+                     <!-- recent post -->
+                     <div class="tj-sidebar-widget wow fadeInUp" data-wow-delay="0.3s">
+                        <h5 class="tj-sidebar-widget-title">Recent Post</h5>
+                        <div class="sidebar-recent-post">
+                           <div class="single-post d-flex align-items-center">
+                              <div class="post-image">
+                                 <a href="blog-details.html"><img src="assets/images/blog/tj-blog-1.webp"
+                                       alt="blog-image"></a>
+                              </div>
+                              <div class="post-header">
+                                 <h6 class="title-link">
+                                    <a href="blog-details.html">Mastering SaaS Marketing Without Spending a...</a>
+                                 </h6>
+                                 <span class="date">Jan 23, 2025</span>
+                              </div>
+                           </div>
+                           <div class="single-post d-flex align-items-center">
+                              <div class="post-image">
+                                 <a href="blog-details.html"><img src="assets/images/blog/tj-blog-2.webp"
+                                       alt="blog-image"></a>
+                              </div>
+                              <div class="post-header">
+                                 <h6 class="title-link">
+                                    <a href="blog-details.html">Common SaaS Startup Mistakes Founders Make...</a>
+                                 </h6>
+                                 <span class="date">Jan 23, 2025</span>
+                              </div>
+                           </div>
+                           <div class="single-post d-flex align-items-center">
+                              <div class="post-image">
+                                 <a href="blog-details.html"><img src="assets/images/blog/tj-blog-3.webp"
+                                       alt="blog-image"></a>
+                              </div>
+                              <div class="post-header">
+                                 <h6 class="title-link">
+                                    <a href="blog-details.html">How to Build a SaaS Startup...</a>
+                                 </h6>
+                                 <span class="date">Jan 23, 2025</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- category -->
+                     <div class="tj-sidebar-widget widget_categories wow fadeInUp" data-wow-delay="0.1s">
+                        <h5 class="tj-sidebar-widget-title">Categories</h5>
+                        <ul>
+                           <li><a href="blog-details.html">Leadership</a>(0)</li>
+                           <li><a href="blog-details.html">Operations</a>(4)</li>
+                           <li><a href="blog-details.html">Financial</a>(2)</li>
+                           <li><a href="blog-details.html">Success</a>(5)</li>
+                        </ul>
+                     </div>
+                     <!-- tags -->
+                     <div class="tj-sidebar-widget wow fadeInUp" data-wow-delay="0.3s">
+                        <h5 class="tj-sidebar-widget-title">Tags</h5>
+                        <div class="tagcloud">
+                           <a href="blog-details.html">Business</a>
+                           <a href="blog-details.html">Consulting</a>
+                           <a href="blog-details.html">Insights</a>
+                           <a href="blog-details.html">Risk</a>
+                           <a href="blog-details.html">Optimization</a>
+                           <a href="blog-details.html">Growth</a>
+                        </div>
+                     </div>
+                     <!-- cta -->
+                     <div class="tj-sidebar-widget wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="tj-sidebar-cta" data-bg-image="assets/images/blog/widget-cta.webp">
+                           <div class="content">
+                              <div class="icon">
+                                 <img src="assets/images/shapes/widget-cta-icon.png" alt="image">
+                              </div>
+                              <h3>Need help? <br> Feel free contact us</h3>
+                              <p>
+                                 Our mission is to empowers businesses off all size in an businesses.
+                              </p>
+                           </div>
+                           <div class="cta-btn">
+                              <a href="contact.html" class="tj-primary-btn white-btn">
+                                 <div class="btn_inner">
+                                    <div class="btn_icon">
+                                       <span>
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+                                    </div>
+                                    <div class="btn_text"><span>Get in touch</span></div>
+                                 </div>
+                              </a>
+                              <img class="shapes move-anim-2" src="assets/images/shapes/carrow.png" alt="shape">
+                           </div>
+                        </div>
+                     </div>
+                  </aside>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end: Blog Section -->
+      <!-- start: Cta Section -->
+      <section class="tj-cta-section">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="cta-wrapper">
+                     <div class="cta-title">
+                        <h2 class="title text-anim">Get consultant now!</h2>
+                     </div>
+                     <div class="cta-button wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="contact.html" class="tj-primary-btn white-btn">
+                           <div class="btn_inner">
+                              <div class="btn_icon">
+                                 <span>
+                                    <i class="tji-arrow-right"></i>
+                                    <i class="tji-arrow-right"></i>
+                                 </span>
+                              </div>
+                              <div class="btn_text">
+                                 <span>Lets talk now</span>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="cta-shapes">
+            <img src="assets/images/shapes/cta-shapes.png" alt="Shapes">
+         </div>
+      </section>
+      <!-- end: Cta Section -->
+
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<!-- start: Cta Section -->
+<section class="tj-page-header" data-bg-image="assets/images/bg/pheader-bg.webp">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-12">
+            <div class="tj-page-header-content text-center">
+               <h1 class="tj-page-title text-anim">Blog with sidebar</h1>
+               <div class="tj-page-link wow fadeInUp" data-wow-delay="0.1s">
+                  <span><a href="index.html"><span>Home</span></a></span>
+                  <span>/</span>
+                  <span><span>Blog with sidebar</span></span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- end: Cta Section -->
+
+<!-- start: Blog Section -->
+<section class="tj-post-area section-space">
+   <div class="container">
+      <div class="row rg-30 justify-content-left" style="display:flex;">
+         {% for i in Blog %}
+         <div class="col-xl-4 col-md-6">
+            <div class="blog-style-2 wow fadeInUp" data-wow-delay="0.1s">
+               
+               <!-- Clickable image -->
+               <a href="/blog_detail/{{i.slug}}" style="display: block; position: relative;">
+                  <img src="/{{i.image}}" alt="Image" style="width:100%; height:250px; object-fit:cover; border-radius: 5px;">
+                  
+                  <!-- Date badge -->
+                  <div style="
+                     position: absolute;
+                     top: 10px;
+                     right: 10px;
+                     background: #ff4d29;
+                     color: white;
+                     padding: 5px 10px;
+                     font-size: 13px;
+                     border-radius: 4px;
+                     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+                  ">
+                     {{i.created_at|date:"d M, Y"}}
+                  </div>
+               </a>
+
+               <!-- Blog content -->
+               <div class="blog-content">
+                  <div class="blog-two-meta" style="margin-bottom: 10px;">
+                     <ul style="padding-left: 0; list-style: none; display: flex; gap: 15px;">
+                        <li><a class="meta-link" href="#">hello</a></li>
+                        <li>03 Comments</li>
+                     </ul>
+                  </div>
+                  <h4 class="title under-line" style="margin-bottom: 10px;">
+                     <a href="/blog_detail/{{i.slug}}">{{i.title}}</a>
+                  </h4>
+                  <div class="desc" style="margin-bottom: 15px;">
+                     <p>{{i.content|truncatechars:80}}</p>
+                  </div>
+                  <div class="blog-button">
+                     <a class="blog-btn text-btn" href="/blog_detail/{{i.slug}}">
+                        Read more <i class="tji-arrow-right"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+
+      <!-- post pagination -->
+      <div class="tj-pagination d-flex justify-content-center" style="margin-top: 30px;">
+         <ul style="display: flex; gap: 10px; list-style: none;">
+            <li>
+               <span aria-current="page" class="page-numbers current" style="padding: 6px 12px; background-color: #ff4d29; color: #fff; border-radius: 3px;">01</span>
+            </li>
+            <li>
+               <a class="page-numbers" href="#" style="padding: 6px 12px; background-color: #f0f0f0; color: #333; border-radius: 3px;">02</a>
+            </li>
+            <li>
+               <a class="next page-numbers" href="#" style="padding: 6px 12px; background-color: #f0f0f0; color: #333; border-radius: 3px;">
+                  <i class="tji-arrow-right"></i>
+               </a>
+            </li>
+         </ul>
+      </div>
+   </div>
+</section>
+<!-- end: Blog Section -->
+
+{% endblock %}

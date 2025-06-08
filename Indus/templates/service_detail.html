@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+
+
+<div style="margin:0; padding-top:60px; font-family:sans-serif; background-color:#f8f8f8;">
+    <!-- Header Section -->
+    <div style="background: linear-gradient(135deg, #ff5f6d, #ffc371); color: white; padding: 40px 20px; text-align: center;">
+   
+        <h1 style="margin: 10px 0;">{{ Service.heading }}</h1>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 30px;">
+
+            <!-- Course Overview (Content summary or intro part of the content) -->
+            <div style="flex:1; min-width:300px; padding: 20px; max-width: 400px;">
+                <h3>What We Offer</h3>
+                <div style="text-align:left;">
+                    {{ Service.content|safe }}
+                </div>
+            </div>
+
+            <!-- Service Details Box -->
+            <div style="flex:1; min-width:300px; background:white; color:black; border-radius:10px; padding:20px; margin:10px; max-width: 400px;">
+                <h3>Service Details</h3>
+                <p>Our service delivers tailored automation training aligned with current industry needs. Fully hands-on and customizable.</p>
+                <p><strong>Price:</strong> {{ Service.price }}</p>
+                <a href='{% url 'service_contact' %}' style="margin-top: 10px; padding: 10px 20px; background-color: #ff5f6d; border: none; color: white; border-radius: 5px;">Get This Service</a>
+            </div>
+        </div>
+    </div>
+
+   <!-- Image and Additional Info -->
+<div style="padding: 40px 20px; display: flex; flex-wrap: wrap; justify-content: center; background-color: #ffffff; gap: 40px;">
+    <!-- Image Block -->
+    <div style="flex: 1; min-width: 300px; max-width: 400px; display: flex; align-items: center; justify-content: center;">
+        {% if Service.image %}
+            <img src="{{ Service.image.url }}" alt="{{ Service.heading }}" style="max-width: 100%; border-radius: 10px;">
+        {% else %}
+            <img src="{% static 'default_service.jpg' %}" alt="Service Image" style="max-width: 100%; border-radius: 10px;">
+        {% endif %}
+    </div>
+
+    <!-- Text Content Block -->
+    <div style="flex: 1; min-width: 300px; max-width: 400px;">
+        <h2>Why Choose Us?</h2>
+        <ul style="line-height: 2; padding-left: 20px;">
+            <li>Expert-led Training</li>
+            <li>Flexible Learning Modules</li>
+            <li>Real-time Industrial Projects</li>
+            <li>Affordable Pricing</li>
+            <li>Certification Support</li>
+        </ul>
+    </div>
+</div>
+
+
+    <!-- Footer CTA -->
+    <div style="text-align:center; padding: 40px 20px; background-color:#f0f0f0;">
+        <h2>Interested in "{{ Service.heading }}"?</h2>
+        <p>Contact us now or visit our <a href="{% url 'contact_us' %}">contact page</a> to enroll or get more information.</p>
+        <a href="{% url 'service' %}" style="margin-top: 20px; display: inline-block; padding: 10px 20px; background-color: #ff5f6d; border: none; color: white; border-radius: 5px;">Back to All Services</a>
+    </div>
+
+</div>
+{% endblock %}

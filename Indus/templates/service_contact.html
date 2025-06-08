@@ -1,0 +1,152 @@
+{% extends 'base.html'%}
+
+{% load static %} 
+ 
+{% block body %}
+
+
+     <!-- start: Contact Top Section -->
+<section class="tj-contact-area section-space">
+   <div class="container">
+      <div class="row">
+         <div class="col-12">
+            <div class="sec-heading text-center">
+               <span class="sub-title wow fadeInUp" data-wow-delay="0.1s">CONTACT US</span>
+               <h3 class="sec-title text-anim">
+                  Would you like to talk to us in person?<br>
+                  In case of any queries please reach out to us on direct call or WhatsApp.
+               </h3>
+            </div>
+         </div>
+      </div>
+
+      <!-- 3 Column Row with Equal Spacing -->
+      <div class="row g-4 justify-content-center">
+         <div class="col-xl-4 col-lg-6 col-sm-6">
+            <div class="contact-item style-2 wow fadeInUp h-100" data-wow-delay="0.1s">
+               <div class="contact-icon">
+                  <i class="tji-email"></i>
+               </div>
+               <h3 class="contact-title">Email us</h3>
+               <ul class="contact-list">
+                  <li><a href="mailto:yatharv.digital@gmail.com">ankitpanwar1738@gmail.com</a></li>
+               </ul>
+            </div>
+         </div>
+
+         <div class="col-xl-4 col-lg-6 col-sm-6">
+            <div class="contact-item style-2 wow fadeInUp h-100" data-wow-delay="0.3s">
+               <div class="contact-icon">
+                  <i class="tji-phone"></i>
+               </div>
+               <h3 class="contact-title">Call us</h3>
+               <ul class="contact-list">
+                  <li><a href="tel:+919303026564">+91 9752041183</a></li>
+               </ul>
+            </div>
+         </div>
+
+         <div class="col-xl-4 col-lg-6 col-sm-6">
+            <div class="contact-item style-2 wow fadeInUp h-100" data-wow-delay="0.5s">
+               <div class="contact-icon">
+                  <i class="tji-location"></i>
+               </div>
+               <h3 class="contact-title">Our Location</h3>
+               <p>Dewas, Madhya Pradesh, 455001</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+      <!-- end: Contact Top Section -->
+      <!-- start: Contact Bottom Section -->
+      <section class="tj-contact-area section-bottom-space">
+         <div class="container">
+            <div class="row rg-50">
+               <!-- contact form -->
+               <div class="col-lg-6">
+                  <div class="contact-form-one style-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <div style='text-align:center;'>
+                    <h3 style='color:#0075ff;'>Send us a message</h3>
+                     <h5 class="title text-anim">Have a specific query? Send us a message and we will get back to you.</h5>
+                    </div>
+                     <form method="post" action="contact_us">
+                        {% csrf_token %}
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <div class="form-input">
+                                 <input type="text" id="first" name="fname" placeholder="First Name*" required="" />
+                              </div>
+                           </div>
+
+
+                            <div class="col-sm-6">
+                              <div class="form-input">
+                                 <input type="text" id="last" name="lname" placeholder="Last name*" required="" />
+                              </div>
+                           </div>
+
+
+                           <div class="col-sm-6">
+                              <div class="form-input">
+                                 <input type="email" id="emailOne" name="email" placeholder="Email address*"
+                                    required="" />
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="form-input">
+                                 <input type="tel" id="tel" name="tel" placeholder="Phone number*" required="" />
+                              </div>
+                           </div>
+
+                           <div class="col-12">
+                              <div class="form-input input-textarea">
+                                 <textarea id="message" name="message" placeholder="Type message"></textarea>
+                              </div>
+                           </div>
+                           <div class="submit-button">
+                              <button type="submit" class="tj-primary-btn">
+                                 <span class="btn_inner">
+                                    <span class="btn_icon">
+                                       <span>
+                                          <i class="tji-arrow-right"></i>
+                                          <i class="tji-arrow-right"></i>
+                                       </span>
+                                    </span>
+                                    <span class="btn_text">
+                                       <span>Send message</span>
+                                    </span>
+                                 </span>
+                              </button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <!-- contact map -->
+               <div class="col-lg-6">
+                  <div class="google-map wow fadeInUp" data-wow-delay="0.3s">
+                     <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96840.74259815917!2d-74.21035326499913!3d40.66794886378488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1742025261462!5m2!1sen!2sbd"
+                        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <br>
+         {% for message in messages %}
+<div class="d-flex justify-content-center">
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+  <strong>Message:</strong> {{message}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+</div>
+
+{% endfor %}
+
+      </section>
+      <!-- end: Contact Bottom Section -->
+
+{% endblock %}
